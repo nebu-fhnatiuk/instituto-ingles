@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 12%;
+  --primary: 17 100% 60%;           /* #FF6B35 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 41 100% 57%;         /* #FFB627 */
+  --secondary-foreground: 0 0% 12%;
+  --muted: 36 100% 95%;
+  --muted-foreground: 0 0% 30%;
+  --accent: 17 100% 60%;
+  --accent-foreground: 0 0% 100%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 17 100% 60%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 0 0% 6%;
+  --foreground: 0 0% 98%;
+  --primary: 17 100% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 41 100% 57%;
+  --secondary-foreground: 0 0% 10%;
+  --muted: 20 10% 14%;
+  --muted-foreground: 0 0% 80%;
+  --accent: 17 100% 60%;
+  --accent-foreground: 0 0% 100%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 17 100% 60%;
+}
+
+html { color-scheme: light; }
+.dark html { color-scheme: dark; }
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+*, ::before, ::after {
+  border-color: hsl(var(--border));
+}
+
+@keyframes floaty {
+  0%,100% { transform: translateY(0px) }
+  50% { transform: translateY(-6px) }
+}
